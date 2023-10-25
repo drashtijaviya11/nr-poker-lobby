@@ -58,6 +58,7 @@ toBtn.addEventListener("click", () => {
     // Toggle the "active" class on the elements
     boxSection.classList.toggle("active");
     boxSectionGame.classList.remove("active");
+    plaBtn.classList.remove("active");
     
 });
 
