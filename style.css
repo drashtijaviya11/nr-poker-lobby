@@ -115,9 +115,11 @@ body{
 .button-section {
     position: relative;
     display: flex;
-    margin-top: 30px;
     flex-direction: row;
+    justify-content: center;
     gap: 30px;
+    margin-top: 30px;
+    width: 99%;
 }
 
 .button-section .first-section {
@@ -132,7 +134,7 @@ body{
     gap: 10px;
     border: none;
     border-radius: 4px;
-    padding: 11px 4px;
+    padding: 10px 4px;
     background: transparent linear-gradient(180deg, #002a9e 30%, #00005f 46%, #0000a3 100%) 0% 0% no-repeat padding-box;
     font-family: "roboto" ,sans-serif;
     font-size: 6px;
@@ -165,14 +167,14 @@ body{
     position: relative;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 4px;
 }
 
 .button-section .second-section .s-r-btn {
     position: relative;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 4px;
 }
 
 .b-btn {
@@ -193,26 +195,27 @@ body{
 }
 
 .btn1 , .btn5 {
-    width: 100px;
-    height: 40px;
-}
-
-.btn2 , .btn6 {
     width: 80px;
     height: 40px;
 }
 
-.btn3 , .btn7 {
-    width: 60px;
-    height: 40px;
-}
-
-.btn4 , .btn8 {
+.btn2 , .btn6 {
     width: 75px;
     height: 40px;
 }
 
-.box-section {
+.btn3 , .btn7 {
+    width: 50px;
+    height: 40px;
+}
+
+.btn4 , .btn8 {
+    width: 70px;
+    height: 40px;
+}
+
+.box-section.active {
+    display: block;
     position: relative;
     align-items: center;
     display: flex;
@@ -224,20 +227,24 @@ body{
     padding: 20px 10px 50px 2px;
     border: 4px solid #9b3841;
     height: 500px;
+    width: 100%;
     overflow: scroll;
+}
+
+.box-section {
+    display: none;
 }
 
 .box-section .first-box {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     position: relative;
     gap: 10px;
+    width: 99%;
 }
 
-.first-box .f-rec,
-.second-box .f-rec,
-.third-box .f-rec,
-.fourth-box .f-rec {
+ .f-rec {
     width: 90px;
     height: 80px;
     margin-left: 0px;
@@ -247,11 +254,8 @@ body{
     cursor: pointer;
 }
 
-.first-box .f-rec:focus-within,
-.second-box .f-rec:focus-within,
-.third-box .f-rec:focus-within,
-.fourth-box .f-rec:focus-within {
-    background: transparent linear-gradient(180deg, #E4434F 0%, #2C181C 100%) 0% 0% no-repeat padding-box;
+.f-rec:focus-within {
+    background: linear-gradient(180deg, #E4434F 0%, #2C181C 100%) !important;
 }
 
 .first-box .f-rec .f-r-detail {
@@ -268,21 +272,18 @@ body{
 }
 
 .f-r-detail .f-r-list img {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 .f-r-detail .f-r-list span {
     font-family: "Roboto" ,sans-serif;
     color: #fff;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-.first-box .s-rec,
-.second-box .s-rec,
-.third-box .s-rec,
-.fourth-box .s-rec {
+.s-rec {
     width: 285px;
     height: 80px;
     border-radius: 6px;
@@ -293,12 +294,13 @@ body{
     flex-direction: column;
 }
 
-.first-box .s-rec:focus-within,
-.second-box .s-rec:focus-within,
-.third-box .s-rec:focus-within,
-.fourth-box .s-rec:focus-within {
-    background: transparent linear-gradient(180deg, #E4434F 0%, #2C181C 100%) 0% 0% no-repeat padding-box;
+/* .focus {
+    background: linear-gradient(180deg, #E4434F 0%, #2C181C 100%) !important;
 }
+
+.f-rec:focus, .s-rec:focus {
+    background: linear-gradient(180deg, #E4434F 0%, #2C181C 100%);
+} */
 
 .first-box .s-rec .f-top {
     position: relative;
@@ -324,7 +326,7 @@ body{
     color: #ffffff;
     font-family: "Noto Sans" ,sans-serif;
     font-weight: 500;
-    font-size: 15px;   
+    font-size: 13px;   
 }
 
 .f-text .s-t {
@@ -336,15 +338,15 @@ body{
 }
 
 .f-text .s-t img {
-    width: 15px;
-    height: 16px;
+    width: 13px;
+    height: 14px;
+    margin-top: 3px;
 }
 
 .f-text .s-t span {
     color: #fff;
     font-family: "Roboto" ,sans-serif;
-    font-size: 18px;
-    margin-top: -5px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -356,7 +358,7 @@ body{
 .s-rec .s-btm {
     position: relative;
     display: flex;
-    margin-top: -30px;
+    margin-top: -25px;
 }
 
 .s-btm .f-b {
@@ -369,7 +371,7 @@ body{
 .s-btm .f-b h4 {
     color: #fff;
     font-family: "Roboto" ,sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
 }
 
@@ -391,14 +393,14 @@ body{
 .s-btm .s-b h4 {
     color: #FFCB00;
     font-family: "Roboto" ,sans-serif;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 500;
 }
 
 .s-btm .s-b span {
     color: #fff;
     font-family: "Roboto" ,sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     margin-top: -10px;
 }
@@ -408,12 +410,13 @@ body{
     flex-direction: column;
     align-items: center;
     margin-left: 10px;
+    margin-top: -5px;
 }
 
 .s-btm .t-b h4 span{
     color: #FFCB00;
     font-family: "Roboto" ,sans-serif;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 500;
 }
 
@@ -425,7 +428,7 @@ body{
 .s-btm .t-b span {
     color: #fff;
     font-family: "Roboto" ,sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     margin-top: -20px;
     margin-left: px
@@ -436,20 +439,20 @@ body{
     flex-direction: column;
     align-items: center;
     margin-left: 5px;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .s-btm .fo-b h4 {
     color: #FFCB00  ;
     font-family: "Roboto" ,sans-serif;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 500;
 }
 
 .s-btm .fo-b span {
     color: #fff;
     font-family: "Roboto" ,sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     margin-top: -10px;
 }
@@ -458,17 +461,10 @@ body{
     display: flex;
     flex-direction: row;
     position: relative;
+    justify-content: center;
     gap: 10px;
     margin-top: 10px;
-}
-
-.second-box .f-rec {
-    width: 90px;
-    height: 80px;
-    margin-left: 0px;
-    border-radius: 6px;
-    background: transparent linear-gradient(180deg, #171733 0%, #3A393D 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FF4252;
+    width: 99%;
 }
 
 .second-box .f-rec .f-r-detail {
@@ -490,16 +486,6 @@ body{
     margin-top: 0px;
 }
 
-.second-box .s-rec {
-    width: 285px;
-    height: 80px;
-    border-radius: 6px;
-    background: #171733 0% 0% no-repeat padding-box;
-    border: 1px solid #FF4252;
-    margin-left: -5px;
-    display: flex;
-    flex-direction: column;
-}
 
 .second-box .s-rec .f-top .box {
     width: 10px;
@@ -524,17 +510,10 @@ body{
     display: flex;
     flex-direction: row;
     position: relative;
+    justify-content: center;
     gap: 10px;
     margin-top: 10px;
-}
-
-.third-box .f-rec {
-    width: 90px;
-    height: 80px;
-    margin-left: 0px;
-    border-radius: 6px;
-    background: transparent linear-gradient(180deg, #171733 0%, #3A393D 100%) 0% 0% no-repeat padding-box;
-    border: 1px solid #FF4252;
+    width: 99%;
 }
 
 .third-box .f-rec .f-r-detail {
@@ -556,16 +535,6 @@ body{
     margin-top: 10px;
 }
 
-.third-box .s-rec {
-    width: 285px;
-    height: 80px;
-    border-radius: 6px;
-    background: #171733 0% 0% no-repeat padding-box;
-    border: 1px solid #FF4252;
-    margin-left: -5px;
-    display: flex;
-    flex-direction: column;
-}
 
 .third-box .s-rec .f-top .box {
     width: 10px;
@@ -590,17 +559,10 @@ body{
     display: flex;
     flex-direction: row;
     position: relative;
+    justify-content: center; 
     gap: 10px;
     margin-top: 10px;
-}
-
-.fourth-box .f-rec {
-    width: 90px;
-    height: 80px;
-    margin-left: 0px;
-    border-radius: 6px;
-    background: transparent linear-gradient(180deg, #171733 0%, #3A393D 100%) 0% 0% no-repeat padding-box;
-    border: 3px solid #FF4252 ;
+    width: 99%;
 }
 
 .fourth-box .f-rec .f-r-detail {
@@ -629,17 +591,6 @@ body{
     margin-top: 10px;
 }
 
-.fourth-box .s-rec {
-    width: 285px;
-    height: 80px;
-    border-radius: 6px;
-    background: #171733 0% 0% no-repeat padding-box;
-    border: 1px solid #FF4252;
-    margin-left: -5px;
-    display: flex;
-    flex-direction: column;
-}
-
 .fourth-box .s-rec .f-top .box {
     width: 10px;
     height: 30px;
@@ -659,6 +610,53 @@ body{
     margin-top: 12px;
 }
 
+.box-section-game.active {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 5px;
+    background: url(images/bg.png);
+    background-color: #000;
+    padding: 20px 10px 50px 2px;
+    border: 4px solid #9b3841;
+    height: 400px;
+    overflow: scroll;
+    display: block;
+}
+
+.box-section-game {
+    display: none;
+    width: 100%;
+}
+
+.box-section-game .first-box {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    width: 99%;
+}
+
+.box-section-game .second-box {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    margin-top: 10px;
+    width: 99%;
+}
+
+.box-section-game .third-box {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 10px;
+    margin-top: 10px;
+    width: 99%;
+}
+
 .btn {
     position: relative;
     display: flex;
@@ -666,7 +664,8 @@ body{
     margin-top: 50px;
 }
 
-.play-btn {
+.play-btn.active {
+    display: block;
     width: 250px;
     height: 50px;
     border: 2px solid #FF4252;
@@ -677,4 +676,8 @@ body{
     letter-spacing: 2px;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
+}
+
+.play-btn {
+    display: none ;
 }
