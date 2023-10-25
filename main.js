@@ -68,9 +68,6 @@ plBtn.addEventListener("click", () => {
     playBtn.classList.remove("active");
 });
 
-
-
-
 fRecElements.forEach((fRecElement, index) => {
     fRecElement.addEventListener('click', function () {
         const sectionId = this.getAttribute('data-section'); // Get the data-section value
