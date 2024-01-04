@@ -6,6 +6,8 @@ const boxSection = document.querySelector(".box-section");
 const boxSectionGame = document.querySelector(".box-section-game");
 const fRecElements = document.querySelectorAll('.f-rec');
 const sRecElements = document.querySelectorAll('.s-rec');
+const tourSection = document.querySelector(".tournament-section");
+const cashGameSection = document.querySelector(".cash-game-section");
 
 let isToBtnActive = false; // Track the active state of "to-btn"
 let isPlBtnActive = false; // Track the active state of "pl-btn"
@@ -56,24 +58,21 @@ plBtn.addEventListener('click', () => {
 
 toBtn.addEventListener("click", () => {
     // Toggle the "active" class on the elements
-    boxSection.classList.toggle("active");
-    boxSectionGame.classList.remove("active");
-    plaBtn.classList.remove("active");
+    tourSection.classList.toggle("active");
+    cashGameSection.classList.remove("active");
     
 });
 
 plBtn.addEventListener("click", () => {
     // Toggle the "active" class on the elements
-    boxSectionGame.classList.toggle("active");
-    boxSection.classList.remove("active");
-    playBtn.classList.remove("active");
+    cashGameSection.classList.toggle("active");
+    tourSection.classList.remove("active");
 });
 
 fRecElements.forEach((fRecElement, index) => {
     fRecElement.addEventListener('click', function () {
-        const sectionId = this.getAttribute('data-section'); // Get the data-section value
+        const sectionId = this.getAttribute('data-section'); 
 
-        // Reset background for all f-rec and s-rec elements
         fRecElements.forEach((fRec) => {
             fRec.classList.remove('highlight');
         });
